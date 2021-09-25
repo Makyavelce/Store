@@ -10,11 +10,11 @@
 }
 
 :root {
-    --charcoal: #424b54ff;
-    --pewter-blue: #93a8acff;
-    --white: #ffffffff;
-    --cameo-pink: #e2b4bdff;
-    --copper-rose: #9b6a6cff;
+    --charcoal: #264653ff;
+    --persian-green: #2a9d8fff;
+    --orange-yellow-crayola: #e9c46aff;
+    --sandy-brown: #f4a261ff;
+    --burnt-sienna: #e76f51ff;
 }
 
 * {
@@ -33,10 +33,13 @@ header {
     display: flex;
     align-content: space-between;
     text-align: center;
-    margin: 5%;
-    padding: 3%;
+    margin: 4%;
+    padding: 0%;
     font-size: 1em;
-    color: var(--copper-rose);
+}
+
+h1 {
+    color: var(--burnt-sienna);
 }
 
 header a {
@@ -49,16 +52,19 @@ header a {
     position: relative;
     display: inline-block;
     margin-left: auto;
+    color: var(--burnt-sienna);
 }
 
 .dropdown {
     display: none;
     position: absolute;
-    background:none;
+    background: none;
     padding: 12px 16px;
     z-index: 5;
     top: 35px;
     right: 25px;
+    background-color: var(--persian-green);
+    color: var(--orange-yellow-crayola);
 }
 
 .menu:hover .dropdown {
@@ -71,7 +77,8 @@ header a {
 
 section {
     font-size: 1.1em;
-    color: var(--cameo-pink);
+    color: var(--persian-green);
+    filter: contrast(50);
 }
 
 main {
@@ -87,8 +94,8 @@ main {
     text-align: center;
     align-items: center;
     margin: 7% 0;
-    border: 2px solid var(--cameo-pink);
-    color: var(--cameo-pink)
+    border: 8px solid var(--sandy-brown);
+    color: var(--persian-green);
 }
 
 main img {
@@ -97,6 +104,7 @@ main img {
 
 .imgcontainer {
     position: relative;
+    background-color: var(--burnt-sienna);
 }
 
 .gato,
@@ -113,24 +121,156 @@ main img {
     position: absolute;
     top: 3%;
     right: 5%;
-    color: var(--cameo-pink);
+}
+
+h2.info{
+    color: var(--persian-green);
+    filter: contrast(50);
 }
 
 .product button {
-    margin: 5% 0;
-    width: 25%;
-    background: var(--cameo-pink);
+    margin: 4% 0;
+    width: 85%;
+    background: var(--orange-yellow-crayola);
     cursor: pointer;
     border-radius: 25px;
     text-decoration: none;
     font-size: 1em;
     font-weight: 800;
-    color: var(--white);
 }
-footer{
+
+h4.info {
+    color: var(--charcoal);
+}
+
+h3.precio {
+    filter: contrast(50);
+}
+
+footer {
     text-align: center;
     text-decoration: none;
+    color: var(--sandy-brown)
 }
-.ig{
-    color: var(--white);
+
+.ig {
+    color: var(--persian-green);
+    filter: contrast(50);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3em;
+        margin: 0%;
+    }
+     .fas{
+        font-size: 25px;
+        padding: 80%;
+    } 
+    section {
+        font-size: 1.5em;
+    }
+    .gato,
+    .kimono,
+    .farol,
+    .platos {
+        margin: auto;
+        padding: 0%;
+        height: 400px;
+        width: 625px;
+    }
+    .imgcontainer .corazon{
+        top: 5%;
+        right: 4%;
+        margin: -3%
+    }
+
+    .info {
+        font-size: 1.5em;
+    }
+
+    .product button {
+        width: 85%;
+    }
+
+    .precio {
+        font-size: 1.5em;
+    }
+    footer{
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 1024px){
+    header{
+        font-size: 3em;
+    }
+    .fas{
+        font-size: 40px;
+        padding: 30%;
+    } 
+    section{
+        font-size: 3em;
+    }
+    .imgcontainer{
+        padding: 10%;
+    }
+    .gato, .kimono, .farol, .platos {
+        margin: auto;
+        padding: 0%;
+        height: 340px;
+        width: 670px;}
+        .imgcontainer .corazon{
+            top: 15%;
+            right: 14%;
+            margin: -4%;
+        }
+
+    .info{
+        font-size: 2em;
+    }
+    .precio{
+        font-size: 2em;
+    }
+    .product button{
+        width: 95%;
+        margin: -5%;
+    }
+    footer{
+        font-size: 2em;
+    }
+}
+@media (min-width: 1440px){
+    .fas {
+        font-size: 60px;
+    }
+    section {
+        font-size: 5em;
+    }
+    .imgcontainer {
+        padding: 11%;
+    }
+    .gato, .kimono, .farol, .platos {
+        margin: -2%;
+        padding: 2%;
+        height: 500px;
+        width: 924px;}
+        .imgcontainer .corazon {
+            top: 12%;
+            right: 14%;
+            margin: -3%;
+            font-size: 40px;
+        }
+        .info {
+            font-size: 3em;
+        }
+        .precio {
+            font-size: 4em;
+        }
+        .product button {
+            width: 100%;
+            margin: 0%;
+        }
+        footer{
+            font-size: 3em;
+        }
 }
